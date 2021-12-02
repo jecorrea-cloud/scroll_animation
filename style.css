@@ -15,3 +15,38 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  background-color: steelBlue;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px, 4px, 5px rgba(0, 0, 0, 0.3);
+
+  /*Following two attributes for the animation */
+
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+/* To make the boxes appear from different sides */
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+/* When the class show has the show in it  */
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+}
